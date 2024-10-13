@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Tolgee, DevTools, TolgeeProvider, FormatSimple } from "@tolgee/react";
+import { Tolgee, DevTools, TolgeeProvider, FormatSimple, BackendFetch } from "@tolgee/react";
 import { T } from "@tolgee/react";
 
 const App = () => {
@@ -10,6 +10,7 @@ const App = () => {
   const tolgee = Tolgee()
     .use(DevTools())
     .use(FormatSimple())
+    .use(BackendFetch({prefix:'https://cdn.tolg.ee/1c78a2bfe00648ecc5bcd10aa4c320ae'}))
     .init({
       language: "en",
 
@@ -17,6 +18,7 @@ const App = () => {
       apiUrl: import.meta.env.VITE_APP_TOLGEE_API_URL,
       apiKey: import.meta.env.VITE_APP_TOLGEE_API_KEY,
 
+      
       // for production
     });
 
