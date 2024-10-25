@@ -10,7 +10,6 @@ const LangSelector = () => {
           
     >
      <option value="en">🇬🇧 English</option>
-    <option value="en-IN">🇮🇳 English (India)</option>
     <option value="hi">🇮🇳 Hindi</option>
     <option value="es">🇪🇸 Spanish</option>
     <option value="ru-RU">🇷🇺 Russian</option>
